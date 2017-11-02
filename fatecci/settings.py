@@ -76,9 +76,16 @@ WSGI_APPLICATION = 'fatecci.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'projeto-impacta',
+        'USER': 'fatecci',
+        'PASSWORD': 'Teste123',
+        'HOST': 'projeto-impacta.database.windows.net',
+        'PORT': '',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 13 for SQL Server',
+        },
+    },
 }
 
 
